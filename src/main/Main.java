@@ -10,10 +10,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(this.getClass().getResource("../fxml/clockPane.fxml"));
-        primaryStage.setTitle("Timer");
+        Parent root = FXMLLoader.load(this.getClass().getResource("../fxml/stopwatch.fxml"));
+        primaryStage.setTitle("Stopwatch");
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("file:/C:/Users/MScho/Desktop/git/super-tool/src/css/timer.css");
+        scene.getStylesheets().add(this.getClass().getResource("../css/time.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
