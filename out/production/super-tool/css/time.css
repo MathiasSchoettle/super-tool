@@ -30,7 +30,7 @@
 }
 
 .button {
-    -fx-background-color: linear-gradient(to bottom, derive(-button-main, 10%), derive(-button-main, -10%));
+    -fx-background-color: linear-gradient(to bottom, derive(-button-main, 20%), derive(-button-main, -20%));
     -fx-background-radius: 50%;
     -fx-background-insets: 0;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.1, 0, 2);

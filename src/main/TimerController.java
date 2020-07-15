@@ -268,8 +268,7 @@ public class TimerController {
     }
 
     private Timeline getArcTimeline() {
-        Timeline returnTimeline = new Timeline();
-        returnTimeline.getKeyFrames().addAll(
+        Timeline returnTimeline = new Timeline(
                 new KeyFrame(Duration.ZERO,
                         new KeyValue(this.arc.lengthProperty(), 0)
                 ),
