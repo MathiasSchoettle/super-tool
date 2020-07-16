@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.time.ClockController">
+    <children>
+        <Circle fx:id="mainCircle" fill="#e4e4e4" layoutX="200.0" layoutY="200.0" radius="170.0" stroke="#3279a7" strokeType="OUTSIDE" strokeWidth="0.0">
+         <effect>
+            <DropShadow height="50.0" radius="24.5" width="50.0" />
+         </effect></Circle>
+        <Line fx:id="hourHand" endX="200.0" endY="100.0" fill="#222222" startX="200.0" startY="230.0" stroke="#303030" strokeWidth="14.0">
+         <effect>
+            <DropShadow color="#00000080" height="5.0" radius="2.0" width="5.0" />
+         </effect></Line>
+        <Line fx:id="minuteHand" endX="200.0" endY="50.0" fill="#222222" startX="200.0" startY="257.0" stroke="#222222" strokeWidth="8.0">
+         <effect>
+            <DropShadow color="#00000080" height="5.0" radius="2.0" width="5.0" />
+         </effect></Line>
+        <Line fx:id="secondsHand" endX="200.0" endY="40.0" startX="200.0" startY="230.0" stroke="#3279a7" strokeWidth="2.0" />
+      <Circle centerX="200.0" centerY="200.0" fill="#3279a7" radius="3.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <DropShadow color="#00000080" height="2.0" radius="0.5" width="2.0" />
+         </effect>
+      </Circle>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+</Pane>

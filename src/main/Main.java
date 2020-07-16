@@ -12,15 +12,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../fxml/container.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../fxml/clock.fxml"));
         Parent root = loader.load();
-        Container c = loader.getController();
+
 
         Pane stopwatch = FXMLLoader.load(this.getClass().getResource("../fxml/stopwatch.fxml"));
         Pane timer = FXMLLoader.load(this.getClass().getResource("../fxml/timer.fxml"));
         Pane alarm = FXMLLoader.load(this.getClass().getResource("../fxml/alarm.fxml"));
-
-        c.setNodes(stopwatch, timer, alarm);
 
         primaryStage.setTitle("Super Tool");
         Scene scene = new Scene(root);
