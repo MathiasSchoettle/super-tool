@@ -1,0 +1,16 @@
+.root {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+
+    /* color constant */
+    -main-color: #3279a7;
+
+    -button-main: -main-color;
+
+    -background-dark: #232323;
+    -background-light: #e4e4e4;
+}
+
+.selectedTextField {
+    -fx-fill: derive(-main-color, 20%);
+}

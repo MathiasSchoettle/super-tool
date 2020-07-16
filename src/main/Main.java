@@ -18,15 +18,17 @@ public class Main extends Application {
 
         Pane stopwatch = FXMLLoader.load(this.getClass().getResource("../fxml/stopwatch.fxml"));
         Pane timer = FXMLLoader.load(this.getClass().getResource("../fxml/timer.fxml"));
+        Pane alarm = FXMLLoader.load(this.getClass().getResource("../fxml/alarm.fxml"));
 
-        primaryStage.setTitle("Stopwatch");
+        c.setNodes(stopwatch, timer, alarm);
+
+        primaryStage.setTitle("Super Tool");
         Scene scene = new Scene(root);
 
-        c.setNodes(stopwatch, timer);
-
         scene.getStylesheets().add(this.getClass().getResource("../css/time.css").toExternalForm());
+        scene.getStylesheets().add(this.getClass().getResource("../css/alarm.css").toExternalForm());
+        scene.getStylesheets().add(this.getClass().getResource("../css/main.css").toExternalForm());
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

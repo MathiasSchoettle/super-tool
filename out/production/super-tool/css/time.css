@@ -1,17 +1,3 @@
-.root {
-    -fx-focus-color: transparent;
-    -fx-faint-focus-color: transparent;
-
-
-    /* color constant */
-    -main-color: #3da75b;
-
-    -button-main: -main-color;
-
-    -background-dark: #232323;
-    -background-light: #e4e4e4;
-}
-
 #mainPane {
     -fx-background-color: -background-dark;
 }
@@ -33,7 +19,6 @@
     -fx-background-color: linear-gradient(to bottom, derive(-button-main, 20%), derive(-button-main, -20%));
     -fx-background-radius: 50%;
     -fx-background-insets: 0;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.1, 0, 2);
 }
 
 .button:hover {
@@ -42,9 +27,5 @@
 
 .button:pressed {
     -fx-background-insets: 0.5;
-}
-
-.selectedTextField {
-    -fx-fill: derive(-main-color, 20%);
 }
 

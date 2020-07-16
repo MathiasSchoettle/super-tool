@@ -2,97 +2,93 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Arc?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-
-  <Pane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.TimerController">
-      <children>
-          <Circle id="outerCircle" layoutX="200.0" layoutY="200.0" radius="190.0" strokeType="INSIDE" strokeWidth="0.0" />
-          <Arc id="arc" fx:id="arc" layoutX="200.0" layoutY="200.0" radiusX="190.0" radiusY="190.0" startAngle="90.0" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
-          <Circle id="innerCircle" layoutX="200.0" layoutY="200.0" radius="175.0" strokeType="INSIDE" strokeWidth="0.0" />
-          <HBox alignment="CENTER" layoutX="125.0" layoutY="266.0" prefHeight="60.0" prefWidth="151.0" spacing="30.0">
-              <children>
-                  <Button fx:id="startPauseButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" HBox.hgrow="ALWAYS">
-                      <cursor>
-                          <Cursor fx:constant="HAND" />
-                      </cursor>
-                      <font>
-                          <Font size="20.0" />
-                      </font>
-                      <graphic>
-                          <FontAwesomeIcon fx:id="playPauseIcon" fill="#222222" iconName="PLAY" />
-                      </graphic>
-                  </Button>
-                  <Button fx:id="resetButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" HBox.hgrow="ALWAYS">
-                      <cursor>
-                          <Cursor fx:constant="HAND" />
-                      </cursor>
-                      <font>
-                          <Font size="20.0" />
-                      </font>
-                      <graphic>
-                          <FontAwesomeIcon fx:id="refreshIcon" fill="#222222" iconName="REFRESH" />
-                      </graphic>
-                  </Button>
-              </children>
-          </HBox>
-          <HBox alignment="BOTTOM_CENTER" layoutX="41.0" layoutY="145.0" prefHeight="70.0" prefWidth="319.0">
-              <children>
-                  <Text fx:id="clockHours" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
-                      <font>
-                          <Font name="Yu Gothic Light" size="52.0" />
-                      </font>
-                  </Text>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
-                      <font>
-                          <Font name="Yu Gothic Light" size="48.0" />
-                      </font>
-                      <HBox.margin>
-                          <Insets bottom="5.0" />
-                      </HBox.margin>
-                  </Text>
-                  <Text fx:id="clockMinutes" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
-                      <font>
-                          <Font name="Yu Gothic Light" size="52.0" />
-                      </font>
-                  </Text>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
-                      <font>
-                          <Font name="Yu Gothic Light" size="48.0" />
-                      </font>
-                      <HBox.margin>
-                          <Insets bottom="5.0" />
-                      </HBox.margin>
-                  </Text>
-                  <Text fx:id="clockSeconds" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="04" textAlignment="CENTER">
-                      <font>
-                          <Font name="Yu Gothic Light" size="52.0" />
-                      </font>
-                  </Text>
-                  <Text fill="WHITE" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text=".">
-                      <font>
-                          <Font name="Yu Gothic Light" size="48.0" />
-                      </font>
-                      <HBox.margin>
-                          <Insets left="-2.0" />
-                      </HBox.margin>
-                  </Text>
-                  <Text fx:id="clockMillis" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="000" textAlignment="CENTER" wrappingWidth="65.64208984375">
-                      <font>
-                          <Font name="Yu Gothic Light" size="39.0" />
-                      </font>
-                      <HBox.margin>
-                          <Insets bottom="2.0" />
-                      </HBox.margin>
-                  </Text>
-              </children>
-          </HBox>
-      </children>
-  </Pane>
+<?import javafx.scene.text.*?>
+<Pane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="250.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="main.time.TimerController">
+    <Circle id="outerCircle" fill="#806e6e" layoutX="125.0" layoutY="125.0" radius="125.0" strokeType="INSIDE"
+            strokeWidth="0.0"/>
+    <Arc id="arc" fx:id="arc" layoutX="125.0" layoutY="125.0" radiusX="125.0" radiusY="125.0" startAngle="90.0"
+         strokeType="INSIDE" strokeWidth="0.0" type="ROUND"/>
+    <Circle id="innerCircle" fill="#141414" layoutX="125.0" layoutY="125.0" radius="115.0" strokeType="INSIDE"
+            strokeWidth="0.0"/>
+    <HBox alignment="CENTER" layoutX="58.0" layoutY="152.0" prefHeight="60.0" prefWidth="136.0" spacing="30.0">
+        <Button fx:id="startPauseButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" HBox.hgrow="ALWAYS">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+                <Font size="20.0"/>
+            </font>
+            <graphic>
+                <FontAwesomeIcon fx:id="playPauseIcon" fill="#222222" iconName="PLAY" size="0.8em"/>
+            </graphic>
+        </Button>
+        <Button fx:id="resetButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" HBox.hgrow="ALWAYS">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+                <Font size="20.0"/>
+            </font>
+            <graphic>
+                <FontAwesomeIcon fx:id="refreshIcon" fill="#222222" iconName="REFRESH" size="0.8em"/>
+            </graphic>
+        </Button>
+    </HBox>
+    <HBox alignment="BOTTOM_CENTER" layoutX="21.0" layoutY="86.0" prefHeight="52.0" prefWidth="209.0">
+        <Text fx:id="clockHours" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+            <font>
+                <Font name="Yu Gothic Light" size="40.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+            <font>
+                <Font name="Yu Gothic Light" size="38.0"/>
+            </font>
+            <HBox.margin>
+                <Insets bottom="5.0"/>
+            </HBox.margin>
+        </Text>
+        <Text fx:id="clockMinutes" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+            <font>
+                <Font name="Yu Gothic Light" size="40.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+            <font>
+                <Font name="Yu Gothic Light" size="38.0"/>
+            </font>
+            <HBox.margin>
+                <Insets bottom="5.0"/>
+            </HBox.margin>
+        </Text>
+        <Text fx:id="clockSeconds" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+            <font>
+                <Font name="Yu Gothic Light" size="40.0"/>
+            </font>
+        </Text>
+        <Text fill="WHITE" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text=".">
+            <font>
+                <Font name="Yu Gothic Light" size="38.0"/>
+            </font>
+            <HBox.margin>
+                <Insets left="-2.0"/>
+            </HBox.margin>
+        </Text>
+        <Text fx:id="clockMillis" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="000" textAlignment="CENTER"
+              wrappingWidth="48.64208984375">
+            <font>
+                <Font name="Yu Gothic Light" size="30.0"/>
+            </font>
+            <HBox.margin>
+                <Insets bottom="2.0"/>
+            </HBox.margin>
+        </Text>
+    </HBox>
+</Pane>

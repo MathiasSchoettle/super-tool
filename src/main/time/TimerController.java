@@ -1,4 +1,4 @@
-package main;
+package main.time;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.animation.Interpolator;
@@ -6,6 +6,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
@@ -83,19 +84,21 @@ public class TimerController {
                 this.onClockNumberClicked(this.clockHours, 23);
             }
         });
+        this.clockHours.setCursor(Cursor.HAND);
 
         this.clockMinutes.setOnMouseClicked(e -> {
             if (e.getButton().equals(MouseButton.PRIMARY)) {
                 this.onClockNumberClicked(this.clockMinutes, 59);
             }
         });
-
+        this.clockMinutes.setCursor(Cursor.HAND);
 
         this.clockSeconds.setOnMouseClicked(e -> {
             if (e.getButton().equals(MouseButton.PRIMARY)) {
                 this.onClockNumberClicked(this.clockSeconds, 59);
             }
         });
+        this.clockSeconds.setCursor(Cursor.HAND);
     }
 
     private void onClockNumberClicked(Text clockText, int maxAmount) {

@@ -1,0 +1,16 @@
+.toggle-button {
+    -fx-background-color: #404040, #ffffff;
+    -fx-background-insets: 0, 4 39 4 4;
+    -fx-background-radius: 25, 50%;
+}
+
+.toggle-button:selected {
+    -fx-background-color: linear-gradient(to left, derive(-main-color, -30%), derive(-main-color, 20%)), #ffffff;
+    -fx-background-insets: 0, 4 4 4 39;
+}
+
+.separator .line {
+    -fx-border-color: #464646;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 50%;
+}

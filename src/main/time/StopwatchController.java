@@ -1,4 +1,4 @@
-package main;
+package main.time;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.animation.Animation;

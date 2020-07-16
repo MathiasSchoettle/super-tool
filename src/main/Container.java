@@ -16,11 +16,15 @@ public class Container {
     public Pane node2;
 
     @FXML
+    public Pane node3;
+
+    @FXML
     public void initialize() {
     }
 
-    public void setNodes(Pane nodeLeft, Pane nodeRight) {
+    public void setNodes(Pane nodeLeft, Pane nodeMiddle, Pane nodeRight) {
         this.node1.getChildren().add(nodeLeft);
-        this.node2.getChildren().add(nodeRight);
+        this.node2.getChildren().add(nodeMiddle);
+        this.node3.getChildren().add(nodeRight);
     }
 }
